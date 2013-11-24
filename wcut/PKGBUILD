@@ -1,0 +1,24 @@
+# Maintainer: Kyle Meyer <kyle@kyleam.com>
+
+pkgname=wcut
+pkgver=0.4.0
+pkgrel=1
+pkgdesc='Cut with words. Similar to the unix command line utility cut, but with words instead'
+arch=(any)
+url='https://github.com/kyleam/wcut.git'
+license=('GPLv3')
+depends=('python' 'python-docopt')
+makedepends=('python-setuptools')
+source=("http://pypi.python.org/packages/source/w/wcut/wcut-$pkgver.tar.gz")
+sha256sums=('7bdf9c6ffc19c9db311174f657ecb0fd1bdd340d569646bbe53d802b2791196e')
+
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+  python setup.py build
+}
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  python setup.py install --skip-build -O1 --root="$pkgdir"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
