@@ -2,15 +2,15 @@
 
 pkgname=wcut
 pkgver=0.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Cut with words. Similar to the unix command line utility cut, but with words instead'
-arch=(any)
-url='https://github.com/kyleam/wcut.git'
+arch=('any')
+url='https://github.com/kyleam/wcut'
 license=('GPLv3')
 depends=('python' 'python-docopt')
 makedepends=('python-setuptools')
-source=("http://pypi.python.org/packages/source/w/wcut/wcut-$pkgver.tar.gz")
-sha256sums=('7bdf9c6ffc19c9db311174f657ecb0fd1bdd340d569646bbe53d802b2791196e')
+source=("https://pypi.python.org/packages/source/${pkgname:0:1}/$pkgname/$pkgname-$pkgver.tar.gz")
+md5sums=('191057cb590ebc72c434b52d2c868626')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
