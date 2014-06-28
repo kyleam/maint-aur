@@ -3,11 +3,11 @@
 
 pkgname=snakemake
 pkgver=2.5.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Python-based language and execution environment for GNU Make-like workflows'
 arch=('any')
 url='https://bitbucket.org/johanneskoester/snakemake/wiki/Home'
-depends=('python' 'python-docopt')
+depends=('python')
 makedepends=('python-setuptools')
 license=('MIT')
 source=("https://bitbucket.org/johanneskoester/snakemake/get/v$pkgver.tar.gz")
