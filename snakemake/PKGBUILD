@@ -9,6 +9,10 @@ arch=('any')
 url='https://bitbucket.org/johanneskoester/snakemake/wiki/Home'
 depends=('python')
 makedepends=('python-setuptools')
+optdepends=(
+  'graphviz: For DAG visualization'
+  'python-docutils: For report generation'
+)
 license=('MIT')
 source=("https://bitbucket.org/johanneskoester/snakemake/get/v$pkgver.tar.gz")
 md5sums=('a1ec47604755cdb5f0f41dcc678f2e62')
